@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+
+{% block content %}
+<div class="head" style="margin-top: 150px;">
+    <p>More questions coming soon!</p>
+</div>
+<div class="tq">
+    <svg viewBox="0 0 600 150">
+        <!-- Symbol-->
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em">&nbsp;&nbsp;&nbsp;THANK
+                YOU&nbsp;&nbsp;&nbsp;</text>
+        </symbol>
+        <!-- Duplicate symbols-->
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+    </svg>
+</div>
+
+
+<div class="lgbt">
+
+    <button type="submit" class="logout-button" onclick="window.location.href='/accounts/logout/';">Logout</button>
+
+</div>
+
+
+<div style="bottom:0px;width:100%;position: absolute; text-align: center; color:#f0f0f0;">
+    <h5>&copy;DEBSOC NITDGP</h5>
+</div>
+{%endblock%}

@@ -1,0 +1,65 @@
+{% load socialaccount %}
+{% providers_media_js %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De-Quiz</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+    </div>
+
+    <div class="head">
+        <p>Choose One to Proceed </p>
+    </div>
+
+    <div class="choosetext">
+        <h1>"Choose the category you have spent most of your time in. You Can't change your choice later."</h1>
+    </div>
+
+    <div class="wall">
+
+        {% if firsttime == 1 %}
+        
+        <div class="wall_title"><button type="submit" class="cbtn"
+             
+                onclick="window.location.href='{% url 'questions_of_movies' %}';"> Movies </button></a></div>
+        <div class="wall_title"><button type="submit" class="cbtn"
+                onclick="window.location.href='{% url 'questions_of_series' %}';">Series </button></div>
+        <div class="wall_title"><button type="submit" class="cbtn"
+                onclick="window.location.href='{% url 'questions_of_books' %}';">Books </button></div>
+
+        {% else %}
+        <div class="wall_title"><button type="submit" class="cbtn"> <a href="{% url 'questions_of_movies'  %}">Continue
+                    ? </a></button></a></div>
+
+
+
+        {% endif %}
+
+    </div>
+    <div style="margin-right: auto; margin-left: auto; text-align: center;">
+        <img src="{% static 'css/dslogowhitepng.png' %}" alt="logo" height="80px" width="auto" style="float:bottom; ">
+
+    </div>
+
+</body>
+
+</html>

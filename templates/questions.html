@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+
+{% block content %}
+
+
+<div class="head">
+    <p>Question {{pk}}</p>
+</div>
+<div style="text-align: center; color: aquamarine;">
+    <h3>Your Score : {{score}}</h3>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="box">
+    {% if question.ispic is True %}
+    <div class="imgbox">
+        <img src="{{question.image}}" alt="" />
+    </div>
+
+    {% endif %}
+
+
+    {% if question.islink is True %}
+    <div style="text-align: center; font-weight: 200; font-size: 21px; color:rgb(149, 247, 146)">
+        <p>
+            Link to the video : <br />
+            <a href="{{ question.link }}"> <u>Watch</u></a>
+
+        </p>
+    </div>
+    {% endif %}
+
+    <p>{{question.question}}
+    </p>
+</div>
+
+{% if cr == -9 %}
+<div style="color: red; text-align: center;">
+    <h4>Try Again</h4>
+</div>
+{% endif %}
+
+
+<div class="container">
+
+    <form class="form" name="Response" method="POST">
+        {% csrf_token %}
+        <input type="text" name="Answer" placeholder="Answer">
+
+        <button type="submit" id="login-button">Submit</button>
+    </form>
+</div>
+{%endblock%}

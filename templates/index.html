@@ -1,0 +1,95 @@
+{% load socialaccount %}
+{% providers_media_js %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De-Quiz</title>
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+    </div>
+
+
+
+    <div class="charc">
+        <div class="wrapper">
+            <div class="border-circle" id="one"></div>
+            <div class="border-circle" id="two"></div>
+            <div class="background-circle">
+                <div class="triangle-light"></div>
+                <div class="body"></div>
+                <span class="shirt-text">P</span>
+                <span class="shirt-text">L</span>
+                <span class="shirt-text">A</span>
+                <span class="shirt-text">Y</span>
+
+                <div class="triangle-dark"></div>
+            </div>
+            <div class="head">
+                <div class="ear" id="left"></div>
+                <div class="ear" id="right"></div>
+                <div class="hair-main">
+                    <div class="sideburn" id="left"></div>
+                    <div class="sideburn" id="right"></div>
+                    <div class="hair-top"></div>
+                </div>
+                <div class="face">
+                    <div class="hair-bottom"></div>
+                    <div class="nose"></div>
+                    <div class="eye-shadow" id="left">
+                        <div class="eyebrow"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="eye-shadow" id="right">
+                        <div class="eyebrow"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="mouth"></div>
+                    <div class="shadow-wrapper">
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+            </div>
+            <span class="music-note" id="one">&#9835;</span>
+            <span class="music-note" id="two">&#9834;</span>
+        </div>
+    </div>
+
+    <div class="headers">
+        <h2><span>D</span>
+            <span>E</span>
+            <span>-</span>
+            <span class="c1">Q</span>
+            <span class="c2">U</span>
+            <span class="c3">I</span>
+            <span class="c4">Z</span>
+        </h2>
+    </div>
+    <div class="wall_title"><button type="submit" class="cbtn"
+            onclick="window.location.href='{% provider_login_url "google" %}';">Login with Google</button></div>
+    <div class="wall_title"><button type="submit" class="cbtn"
+            onclick="window.location.href='{% url "leaderboard" %}';">Leaderboard</button></div>
+
+
+    <div style="bottom:0px;width:100%;position: relative; text-align: center; color:#f0f0f0;">
+        <h5>&copy;DEBSOC NITDGP</h5>
+    </div>
+</body>
+
+</html>
