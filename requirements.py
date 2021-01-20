@@ -12,3 +12,4 @@ requests==2.23.0
 requests-oauthlib==1.3.0
 sqlparse==0.3.1
 urllib3==1.25.9
+python-decouple==3.4

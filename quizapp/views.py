@@ -103,7 +103,7 @@ def choose(request):
 
 
     
-    if case is 0:
+    if case == 0:
         firsttime = 1
         return render(request, 'choose.html', {'name':name, 'firsttime':firsttime, 'pk':prk})
 
