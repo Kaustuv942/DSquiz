@@ -2,5 +2,9 @@
 *.log
 *.pot
 *.pyc
+bin/
+env/
+include/
+myenv/
 __pycache__/
 local_settings.py
