@@ -170,7 +170,7 @@ ACCOUNT_LOGOUT_REDIRECT_URL ='/'
 
 SOCIALACCOUNT_PROVIDERS = {
     
-     'google': {
+    'google': {
         
     }
 }
