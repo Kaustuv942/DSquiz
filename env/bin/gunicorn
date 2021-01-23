@@ -1,4 +1,4 @@
-#!/home/kkc/Documents/project/debsoc/quizdebsoc/env/bin/python3
+#!/home/kkc/Documents/project/debsoc/DSquiz/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
