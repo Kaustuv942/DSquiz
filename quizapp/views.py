@@ -31,7 +31,7 @@ def login(request):
 def timer(request):
     active = config.current_config(config)
     if active is None:
-        return HttpResponse('No Quizes Set')
+        return end(request)
     starttime = active.quiz_start
     level = active.current_day
     
@@ -54,7 +54,7 @@ def Question(request):
     try:
         Thisquestion = question.objects.get( order = player.qno, day = player.day)
     except question.DoesNotExist:
-        return HttpResponse("Please wait for more questions")
+        return end(request)
     qno = player.qno
     if request.method == 'POST':
         

@@ -1,1 +1,11 @@
-<h1> Here should be a timer: </h1>
+{% extends "base.html" %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+
+{% block content %}
+<div style="color: white; text-align: center;">
+    <h1 color='white'> starting level {{level}} at {{starttime}} </h1>
+</div>
+
+{%endblock%}
