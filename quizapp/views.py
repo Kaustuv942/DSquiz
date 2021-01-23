@@ -66,10 +66,10 @@ def Question(request):
             
             player.score += active.points
             player.qno += 1
-            if player.qno > active.q_no:
-                player.day += 1
-                player.qno = 1
             player.save()
+            if player.qno > active.q_no:
+                return end(request)
+            
             
 
             return Question(request)  

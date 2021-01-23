@@ -13,18 +13,18 @@
 {% for obj in users %}
 {% if obj.name == nam %}
 <div class="lbbox" style="background-color:rgba(82, 186, 235, 0.4); border-left: 4px solid rgb(0, 162, 255);">
-    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.pointsfactor}}</span>
+    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.score}}</span>
     </p>
 </div>
 {% elif obj.rank < 6 %}
 <div class="lbbox" style="border-left: 4px solid green;">
-    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.pointsfactor}}</span>
+    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.score}}</span>
     </p>
 </div>
 {% else %}
 
 <div class="lbbox">
-    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.pointsfactor}}</span>
+    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.score}}</span>
     </p>
 </div>
 {% endif %}
