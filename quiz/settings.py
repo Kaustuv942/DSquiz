@@ -169,9 +169,14 @@ ACCOUNT_LOGOUT_REDIRECT_URL ='/'
 
 
 SOCIALACCOUNT_PROVIDERS = {
-    
-     'google': {
-
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
     }
 }
 

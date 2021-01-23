@@ -11,20 +11,20 @@
 
 
 {% for obj in users %}
-{% if obj.name == nam %}
+{% if obj.email == nam %}
 <div class="lbbox" style="background-color:rgba(82, 186, 235, 0.4); border-left: 4px solid rgb(0, 162, 255);">
-    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.pointsfactor}}</span>
+    <p> {{ obj.rank  }} <!-- img src="{{ obj.socialaccount_set.all.0.get_avatar_url }}" style="height:40px; width:40px; border-radius:40px;"/ --> {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.score}}</span>
     </p>
 </div>
 {% elif obj.rank < 6 %}
 <div class="lbbox" style="border-left: 4px solid green;">
-    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.pointsfactor}}</span>
+    <p> {{ obj.rank  }} {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.score}}</span>
     </p>
 </div>
 {% else %}
 
 <div class="lbbox">
-    <p> {{ obj.rank  }}. {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.pointsfactor}}</span>
+    <p> {{ obj.rank  }} {{ obj.name }} <span style="color:rgb(188, 213, 252); float:right;">{{obj.score}}</span>
     </p>
 </div>
 {% endif %}
