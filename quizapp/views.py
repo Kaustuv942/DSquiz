@@ -52,15 +52,12 @@ def Question(request):
         player.qno = 1
         player.save()
     try:
-        Thisquestion = question.objects.get( order = player.qno, day = player.day)
+        Thisquestion = question.objects.get(order = player.qno, day = player.day)
     except question.DoesNotExist:
         return end(request)
     qno = player.qno
     if request.method == 'POST':
-        
-        
         answer = request.POST.get('Answer')
-        
         decision = question.check_ans(question, answer, Thisquestion)
         if (decision == 1):
             
