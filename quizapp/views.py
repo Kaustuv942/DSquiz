@@ -57,14 +57,11 @@ def Question(request):
         if decision == True:
             player.score +=active.points
             player.qno += 1
-
             player.save()
             if player.qno > active.q_no:
                 return end(request)
-            
-            
-
-
+            player.save()
+            request.method = 'GET'
             return Question(request)  
         else:
             return render(request, 'questions.html',{'question':Thisquestion, 'pk':qno, 'score':player.score, 'cr':-9}) 

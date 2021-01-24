@@ -5,7 +5,7 @@ html {
     background-attachment: fixed;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(-90deg, #000, #1c2735, #111820, #090a0f);
+    background: linear-gradient(-90deg, #000428, #004e92, #000428);
     background-size: 400% 100%;
     animation: gradient 6s ease infinite;
     font-family: 'Jost', sans-serif;

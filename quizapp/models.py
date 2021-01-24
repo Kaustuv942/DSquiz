@@ -1,14 +1,12 @@
 from django.db import models
-
-
 from django.contrib.auth.models import User
-
+from django.utils import timezone
 import datetime
 from collections import Counter
 import datetime
 import pytz
-from pytz import timezone
-utc= pytz.utc
+
+utc=pytz.UTC
 
 
 
@@ -223,7 +221,7 @@ class config(models.Model):
             list_of_configs.append(new)
             new = []                
 
-        maxi = datetime.datetime.now().replace(tzinfo=utc)
+        maxi = timezone.now().replace(tzinfo=utc)
         choice = None
         if len(configs) == 0: 
             default_choice = None
@@ -231,7 +229,7 @@ class config(models.Model):
             default_choice = configs[0]
         for i in list_of_configs:
             
-            maxi = datetime.datetime.now().replace(tzinfo=utc)
+            maxi = timezone.now().replace(tzinfo=utc)
             for j in i:
                 default_choice = j
                 quiz_endtime = j.quiz_endtime.replace(tzinfo=utc)
@@ -251,11 +249,13 @@ class config(models.Model):
     def quiz_active(self):
         curr_config = self.current_config(self)                     #current valid config is found
         if curr_config is None:
-            return False                                            
-        current_time=datetime.datetime.now().replace(tzinfo=utc)    #No config in the DB     
+            return False     
+        print(curr_config.quiz_start)                                       
+        current_time=timezone.now().replace(tzinfo=utc)    #No config in the DB     
         quiz_endtime=curr_config.quiz_endtime.replace(tzinfo=utc)
         quiz_srttime=curr_config.quiz_start.replace(tzinfo=utc)
-        print(curr_config.quiz_endtime)
+        print(quiz_endtime)
+        print(quiz_srttime)
         print(current_time)  
         if current_time >= quiz_endtime or current_time <= quiz_srttime :                               #if the valid config's time endtime is yet to come, then its an active quiz. The starttime value is 
             curr_config.quiz_active=False                           #compared in the frontend. 
