@@ -14,7 +14,17 @@
     <style>
 
         body {
-          overflow: hidden; /* Hide scrollbars */
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        /* Optional: show position indicator in red */
+        ::-webkit-scrollbar-thumb {
+            background: #FF0000;
         }
 
         ul {
@@ -111,9 +121,7 @@
 
 
     <div class="navv">
-        <div class ="flex2">
-            <img src="{% static 'css/NIT_Durgapur_logo.png' %}" alt="logo" height="50px" width="auto" style="float:left; margin-left: 5px;">
-        </div>
+        
         <ul class = 'topnav' id = "myTopnav">
             {% if user.is_authenticated %}
             <li><a href="{% url 'login' %}">Game</a></li>
