@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+
+{% block content %}
+
+<div class="head" style="margin-top: 90px;">
+    <p>RULES</p>
+</div>
+
+<div style="width:94%; max-width:600px; margin: 20px auto; font-size:18px; color: #fff;  padding: 20px;
+    border-top: 4px solid #f5f7f9;
+    border-bottom: 4px solid #f5f7f9;
+    border-radius: 20px;
+    text-align: left;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 200, 200, 0.1);">
+    1) Solving each round rewards you 10 points.<br/>
+2) Each Round is based on a book/movie/series which you need to figure out.<br/>
+3) The book/movie/series mentioned will be 
+associated with a picture/video to help you identify that book/movie/series.<br/>
+4) The hints to each question will be revealed few hours after the question has been revealed.</div>
+{%endblock%}

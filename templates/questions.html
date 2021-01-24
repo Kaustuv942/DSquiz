@@ -11,7 +11,7 @@
 
 
 <div class="head">
-    <br><br><br><br><br>
+    <br><br><br>
     <p>Question {{pk}}</p>
 </div>
 <div style="text-align: center; color: aquamarine;">
@@ -58,7 +58,7 @@
 
     <form class="form" name="Response" method="POST">
         {% csrf_token %}
-        <input type="text" name="Answer" placeholder="Answer">
+        <input type="text" name="Answer" placeholder="Answer" autocomplete="off">
 
         <button type="submit" id="login-button">Submit</button>
     </form>

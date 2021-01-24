@@ -80,3 +80,7 @@ def leaderboard(request):
 @login_required
 def end(request):
     return render(request, 'end.html')
+    
+@login_required
+def rules(request):
+    return render(request, 'rules.html')

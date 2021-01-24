@@ -4,7 +4,8 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background: linear-gradient(-90deg, #000428, #004e92, #000428);
     background-size: 400% 100%;
     animation: gradient 6s ease infinite;
@@ -219,12 +220,25 @@ a {
 
 span.bar {
     display: block;
-    width: 35px;
-    height: 5px;
+    width: 33px;
+    height: 4px;
     margin-top: 4px;
     background: #f0f0f0;
     border-radius: 2px;
     z-index: 120;
+}
+
+.mobile-nav {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(105, 102, 102, 0.144);
+    backdrop-filter: blur(3px);
+    position: fixed;
+    z-index: 99;
+    top: 0;
 }
 
 #togg_menu {
@@ -232,6 +246,20 @@ span.bar {
     outline: none;
     background: transparent;
     cursor: pointer;
+    z-index: 999;
+    position: absolute;
+    top: 14px;
+    left: 10px;
+}
+
+@media screen and (min-width: 801px) {
+    #togg_menu,
+    .mobile-nav {
+        display: none;
+    }
+    header {
+        display: none;
+    }
 }
 
 #togg_menu:focus~header>.megaMenu {
@@ -258,7 +286,8 @@ header .megaMenu {
     margin: 0;
     top: 0;
     left: 0;
-    background: rgba(22, 23, 29, 0.95);
+    background: rgba(0, 14, 61, 0.55);
+    backdrop-filter: blur(6px);
     position: fixed;
     width: 250px;
     height: 100%;
@@ -313,6 +342,7 @@ header .megaMenu li:hover {
     color: white;
     box-sizing: border-box;
     box-shadow: 10px 10px 7px rgba(10, 10, 10, 0);
+    width: 90%;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -320,6 +350,7 @@ header .megaMenu li:hover {
     border-bottom: 4px solid #f5f7f9;
     border-radius: 20px;
     text-align: center;
+    backdrop-filter: blur(3px);
 }
 
 .imgbox img {
@@ -336,10 +367,17 @@ header .megaMenu li:hover {
     color: #fff;
     box-sizing: border-box;
     max-width: 800px;
+    width: 90%;
     margin: 0 auto;
     padding: 6px;
     font-size: 17px;
     border-left: 4px solid white;
+    backdrop-filter: blur(3px);
+}
+
+.lbbox p {
+    width: 95%;
+    margin: 15px auto;
 }
 
 .head {
@@ -681,7 +719,7 @@ form button:hover {
 }
 
 svg {
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .lgbt {

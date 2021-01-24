@@ -23,7 +23,7 @@ from quizapp import views
 urlpatterns = [
     url(r'^$', views.login, name='login'),
     url(r'^end/', views.end, name='end'),
-
+    url(r'^rules/', views.rules, name="rules"),
     url(r'^leaderboard/', views.leaderboard, name='leaderboard'),
     path('accounts/login/', views.login),
     path('admin/', admin.site.urls),

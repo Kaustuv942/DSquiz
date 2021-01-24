@@ -13,6 +13,10 @@
     <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
 
     </style>
@@ -93,8 +97,13 @@
             onclick="window.location.href='{% url "leaderboard" %}';">Leaderboard</button></div>
 
 
-    <div style="bottom:0px;width:100%;position: relative; text-align: center; color:#f0f0f0;">
-        <h5>&copy;DEBSOC NITDGP</h5>
+    <div style="bottom:0px;width:100%;position: relative; text-align: center; color:#f0f0f0; margin-top: 20px;">
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+        <a href="https://www.instagram.com/debsocnitd"><i class="fa fa-instagram" aria-hidden="true" style="font-size:30px; margin-right: 12px;"></i></a>
+        <a href="http://debsocnitdgp.in"><img src="{% static 'css/dslogowhitepng.png' %}" alt="logo" height="30px" width="auto" style="margin: 0px 12px;"/></a>
+        <a href="https://www.facebook.com/debatingsociety3103.nitd"><i class="fa fa-facebook" aria-hidden="true" style="font-size:25px; margin-left: 12px;"></i></a>
+        </div>
+        <h5 style="margin: 5px auto;">&copy;DEBSOC NITDGP</h5>
     </div>
 </body>
 
