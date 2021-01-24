@@ -17,3 +17,5 @@ ENV/
 env.bak/ 
 venv.bak/ 
 Debsocquiz.pem
+env
+myenv
