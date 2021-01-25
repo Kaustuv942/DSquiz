@@ -61,11 +61,13 @@ class question (models.Model):
         ordering=['day','order']
 
     def check_ans(self,answer,question):
-        string = question.answer.lower()
-        answer = answer.lower()
-        answers=string.split(",")
-        for ans in answers:
-            if answer==ans:
+        answer = answer.lower().strip()
+        answer = answer.replace(" ","")
+        answers = self.answer.split(",")
+        for a in answers:
+            a = a.lower()
+            a = a.replace(" ","")
+            if a == answer:
                 return True
         return False
 
