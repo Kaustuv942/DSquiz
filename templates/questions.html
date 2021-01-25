@@ -35,11 +35,13 @@
 
     {% if question.islink is True %}
     <div style="text-align: center; font-weight: 200; font-size: 21px; color:rgb(149, 247, 146)">
-        <p>
+        {% comment %} <p>
             Link to the video : <br />
             <a href="{{ question.link }}"> <u>Watch</u></a>
 
-        </p>
+        </p> {% endcomment %}
+        <iframe class="frame" style="width: 96%; max-width:500px; height: auto; min-height:250px; border-radius:20px;" src="{{ question.link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
     </div>
     {% endif %}
 
