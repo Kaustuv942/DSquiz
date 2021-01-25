@@ -61,7 +61,7 @@ class question (models.Model):
         ordering=['day','order']
 
     def check_ans(self,answer,question):
-        answer = answer.lower().strip()
+        answer = answer.lower()
         answer = answer.replace(" ","")
         answers = self.answer.split(",")
         for a in answers:
