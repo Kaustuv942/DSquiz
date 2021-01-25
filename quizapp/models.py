@@ -61,22 +61,16 @@ class question (models.Model):
         ordering=['day','order']
 
     def check_ans(self,answer,question):
+        string = question.answer.lower()
         answer = answer.lower()
         answer = answer.replace(" ","")
-        answers = self.answer.split(",")
-        for a in answers:
-            a = a.lower()
-            a = a.replace(" ","")
-            if a == answer:
+        answers = string.split(",")
+        for ans in answers:
+            ans = ans.lower()
+            ans = ans.replace(" ","")
+            if answer==ans:
                 return True
         return False
-
-        # #answer checker is messed up too//fixed. gaps are not respected tho.take care
-        # if(Counter(answer) == Counter(question.answer)):
-        #     return True
-        # else:
-        #     return False
-
        
 
     def get_next_question(self,day,qno):
