@@ -381,6 +381,20 @@ header .megaMenu li:hover {
     border-radius: 10px;
 }
 
+.lwrap {
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.lwrap::-webkit-scrollbar {
+    display: none;
+}
+
 .lbbox {
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;

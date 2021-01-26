@@ -9,7 +9,7 @@
     <p>LEADERBOARD</p>
 </div>
 
-
+<div class="lwrap">
 {% for obj in users %}
 {% if obj.email == nam %}
 <div class="lbbox" style="background-color:rgba(82, 186, 235, 0.4); border-left: 4px solid rgb(0, 162, 255);">
@@ -35,5 +35,5 @@
 </div>
 {% endif %}
 {% endfor %}
-
+</div>
 {%endblock%}
